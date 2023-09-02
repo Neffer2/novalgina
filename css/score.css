@@ -1,0 +1,39 @@
+html {
+    height: 100% !important;
+}
+
+body {
+    padding: 0 !important;
+    height: 100%;
+    background-color: black;
+}
+
+.container {
+    height: 100%;
+    padding: 0 5rem;
+}
+
+.hero {
+    height: 100%;
+    background-image: url('../assets/img/3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-right: 2.5%;
+    padding-bottom: 2.5%;
+}
+
+.puntaje {
+    text-align: center;
+    font-family: kontora-extrablack !important;
+    font-size: 50px;
+    color: #fff;
+} 
+
+.puntaje span {
+    font-family: kontora-extrablack !important;
+    font-size: 80px;
+}

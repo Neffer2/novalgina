@@ -1,0 +1,26 @@
+html {
+    height: 100% !important;
+}
+
+body {
+    padding: 0 !important;
+    height: 100%;
+    background-color: black;
+}
+
+.container {
+    height: 100%;
+    padding: 0 5rem;
+}
+
+.hero {
+    height: 100%;
+    background-image: url('../assets/img/1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    padding-right: 2.5%;
+    padding-bottom: 2.5%;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Novalgina adultos</title>
+</head>
+<body> 
+    <div class="frame">
+        <div class="row pregunta-container gy-2">
+            <div class="col-md-12">
+                <div class="pregunta"> Novalgina es: </div>
+            </div>
+            <div class="col-md-12">
+                <div class="opcion" onclick="getRespuesta(0, this)"> Todas son correctas. </div>
+            </div>
+            <div class="col-md-12">
+                <div class="opcion" onclick="getRespuesta(0, this)"> Alivia la temperatura de manera rápida y prolongada. </div>
+            </div>
+            <div class="col-md-12">
+                <div id="correcta" class="opcion" onclick="getRespuesta(1, this)"> Su acción antipirética es mas eficaz vs Ibuprofeno y Acetaminofén. </div>
+            </div>
+            <div class="col-md-12">
+                <div class="opcion" onclick="getRespuesta(0, this)"> Un analgésico y antipirético confiable. </div>
+            </div> 
+        </div> 
+    </div>
+    
+    <div class="score-frame">
+        <div class="puntos-container">
+            <span id="score">0</span> PUNTOS
+        </div>
+        <div class="time-container">
+            <span id="countdown"></span>
+        </div>
+    </div>
+    <script>
+        document.cookie = "score=0";
+        document.cookie = "time=180";
+        var nextQuestion = 2;
+    </script>
+    <script src="../js/app.js" type="module"></script> 
+    <script src="../css/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Novalgina adultos</title>
+</head>
+<body>
+    <div class="frame">
+        <div class="row pregunta-container gy-2">
+            <div class="col-md-12">
+                <div class="pregunta">¿A través de que vías es el mecanismo de acción de Novalgina?</div>
+            </div>
+            <div class="col-md-12">
+                <div id="correcta" class="opcion" onclick="getRespuesta(1, this)"> Inhibición de COX 1, COX 2 y COX 3. </div>
+            </div>
+            <div class="col-md-12">
+                <div class="opcion" onclick="getRespuesta(0, this)"> Activación de sistemas cannabinoide. </div>
+            </div>
+            <div class="col-md-12">
+                <div class="opcion" onclick="getRespuesta(0, this)"> Todas son correctas. </div>
+            </div>
+            <div class="col-md-12">
+                <div class="opcion" onclick="getRespuesta(0, this)"> Activación del sistema opioide. </div>
+            </div>
+        </div> 
+    </div> 
+    
+    <div class="score-frame">
+        <div class="puntos-container">
+            <span id="score">50</span> PUNTOS
+        </div>
+        <div class="time-container">
+            <span id="countdown"></span>
+        </div>
+    </div>
+    <script>
+        var nextQuestion = 8;
+    </script>
+    <script src="../js/app.js" type="module"></script> 
+    <script src="../css/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
