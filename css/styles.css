@@ -21,7 +21,7 @@
 }
 
 html {
-    font-size: 30px;
+    font-size: 22px;
     height: 100% !important; 
 }
 
@@ -103,7 +103,7 @@ body {
 }
 
 .time-container {
-    height: 110px;
+    height: 84px;
     width: 50px;
     border: 10px solid #065020;
     border-radius: 400px;
