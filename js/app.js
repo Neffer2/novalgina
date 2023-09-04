@@ -7,11 +7,11 @@ var ticker;
 
 function mount(){
     getScore();
-    startTimer(getTime());
-} 
+    startTimer();
+}  
 
-function startTimer(secs) {
-    timeInSecs = parseInt(secs);
+function startTimer() {
+    timeInSecs = 60;
     ticker = setInterval(tick, 1000); 
 }
 
@@ -21,21 +21,20 @@ function tick( ) {
         timeInSecs--;   
     }else {
         clearInterval(ticker);
-
-        window.location.href = `../scenes/pregunta11.html`;
+        window.location.href = `../scenes/pregunta${nextQuestion}.html`;
     }
     
     var mins = Math.floor(secs/60);
     secs %= 60;
     var pretty = ( (mins < 10) ? "0" : "" ) + mins + ":" + ( (secs < 10) ? "0" : "" ) + secs;
-    setTime(pretty, timeInSecs);
+    setTime(pretty);
 }
 
 const getRespuesta = (respuesta, elem) => {    
     if (respuesta){
         elem.style.backgroundColor = "#78ba20";
         setScore();
-        getScore(); 
+        getScore();
     }else {
         elem.style.backgroundColor = "#ed1c24";
     }
@@ -49,38 +48,18 @@ const getRespuesta = (respuesta, elem) => {
 }
 
 function getScore(){
-    let innerScore = document.cookie.match(/score=([^;]+)/);
-    if (innerScore) {
-        const cookie = innerScore[1];
-        currentScore.innerText = cookie;
-    }
+    let score = localStorage.getItem("score");
+    currentScore.innerText = score;
 }
 
 function setScore(){ 
-    let innerScore = document.cookie.match(/score=([^;]+)/);
-    if (innerScore) {
-        const cookie = innerScore[1];
-        // set
-        document.cookie = `score=${parseInt(cookie) + 1}`;
-    }    
+    let storedScore = localStorage.getItem("score");
+    storedScore
+    localStorage.setItem("score", (parseInt(storedScore) + 1));
 }
 
-function getTime(){
-    let innerTime = document.cookie.match(/time=([^;]+)/);
-    if (innerTime) {
-        const cookie = innerTime[1];
-        return cookie;
-    }
-}
-
-function setTime(pretty, timeInSecs){
-    let innerTime = document.cookie.match(/time=([^;]+)/);
-    if (innerTime) {
-        const cookie = innerTime[1];
-        // set
-        countdown.innerHTML = pretty;
-        document.cookie = `time=${timeInSecs}`;
-    }
+function setTime(pretty){
+    countdown.innerHTML = pretty;
 }
 
 function disableOpciones(){
@@ -94,6 +73,5 @@ function disableOpciones(){
 window.addEventListener("DOMContentLoaded", function() {
     mount();
 });
-
 window.getRespuesta = getRespuesta;
 

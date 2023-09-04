@@ -1,0 +1,23 @@
+﻿﻿<?xml version="1.0" encoding="utf-8"?>
+<HtmlCompiler>
+  <App>
+    <ID>{FEEAD66B-BDD0-4A0E-84FD-CE5A64333666}</ID>
+    <Name>Encuesta Novalgina</Name>
+    <IndexHtml>index.html</IndexHtml>
+    <OriginalFileName>Encuesta_Novalgina</OriginalFileName>
+    <Top>156</Top>
+    <Left>104</Left>
+    <Width>1675</Width>
+    <Height>768</Height>
+    <WindowStyle>1</WindowStyle>
+    <WindowBorder>0</WindowBorder>
+    <IcoPath>assets\icons\Novalgina.ico</IcoPath>
+    <Generator>
+      <Name>DecSoft HTML Compiler</Name>
+      <Website>https://www.decsoftutils.com/</Website>
+      <Orders>https://www.decsoftutils.com/store/</Orders>
+      <EMail>info@decsoftutils.com</EMail>
+      <Copyright>©2023 DecSoft HTML Compiler. All rights reserved.</Copyright>
+    </Generator>
+  </App>
+</HtmlCompiler>
