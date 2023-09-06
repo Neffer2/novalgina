@@ -33,9 +33,11 @@ function tick( ) {
 const getRespuesta = (respuesta, elem) => {    
     if (respuesta){
         elem.style.backgroundColor = "#78ba20";
-        setScore();
+        addScore();
         getScore();
     }else {
+        subScore();
+        getScore();
         elem.style.backgroundColor = "#ed1c24";
     }
     correcta.style.backgroundColor = "#78ba20";
@@ -52,10 +54,16 @@ function getScore(){
     currentScore.innerText = score;
 }
 
-function setScore(){ 
+function subScore(){
     let storedScore = localStorage.getItem("score");
-    storedScore
-    localStorage.setItem("score", (parseInt(storedScore) + 1));
+    if (storedScore > 0){
+        localStorage.setItem("score", (parseInt(storedScore) - 50));
+    }
+}
+
+function addScore(){ 
+    let storedScore = localStorage.getItem("score");
+    localStorage.setItem("score", (parseInt(storedScore) + 100));
 }
 
 function setTime(pretty){
