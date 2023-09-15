@@ -8,6 +8,7 @@ var ticker;
 function mount(){
     getScore();
     startTimer();
+    playMusic();
 }  
 
 function startTimer() {
@@ -33,9 +34,11 @@ function tick( ) {
 const getRespuesta = (respuesta, elem) => {    
     if (respuesta){
         elem.style.backgroundColor = "#78ba20";
+        playSuccess();
         addScore();
         getScore();
     }else {
+        playError();
         subScore();
         getScore();
         elem.style.backgroundColor = "#ed1c24";
@@ -78,8 +81,25 @@ function disableOpciones(){
     }
 }
 
+function playMusic(){
+    const audio = new Audio('../assets/audio/Thinking_Music.mp3');
+    audio.setAttribute("user-initiated", "");
+    audio.play();
+}
+
+function playSuccess(){
+    const audio = new Audio('../assets/audio/success2.wav');
+    audio.setAttribute("user-initiated", "");
+    audio.play();
+}
+
+function playError(){
+    const audio = new Audio('../assets/audio/error2.wav');
+    audio.setAttribute("user-initiated", "");
+    audio.play();
+}
+
 window.addEventListener("DOMContentLoaded", function() {
     mount();
 });
 window.getRespuesta = getRespuesta;
-
