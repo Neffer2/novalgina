@@ -49,7 +49,7 @@ const getRespuesta = (respuesta, elem) => {
     let next = setInterval(() => {
         window.location.href = `../scenes/pregunta${nextQuestion}.html`;
         clearInterval(next);
-    }, 3000);
+    }, 2500);
 }
 
 function getScore(){
